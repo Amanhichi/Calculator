@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <script>
+            function sum()
+            {
+                var a=document.getElementById("x").value;
+                var b=document.getElementById("y").value;
+                document.getElementById("r").value=parseInt(a)+parseInt(b);
+            }
+            function mul()
+            {
+                var a=document.getElementById("x").value;
+                var b=document.getElementById("y").value;
+                document.getElementById("r").value=a*b;
+            }
+            function div()
+            {
+                var a=document.getElementById("x").value;
+                var b=document.getElementById("y").value;
+                document.getElementById("r").value=a/b;
+            }
+            function mod()
+            {
+                var a=document.getElementById("x").value;
+                var b=document.getElementById("y").value;
+                document.getElementById("r").value=a%b;
+            }
+            function sub()
+            {
+                var a=document.getElementById("x").value;
+                var b=document.getElementById("y").value;
+                document.getElementById("r").value=a-b;
+            }
+
+        </script>
+        <style>
+            .background{
+                background-image: url("Beach1.png");
+            }
+            .calculator{
+                border: 4px solid white;
+                background-color: black;
+                border-radius: 25px;
+                height: 560px;
+                width: 300px;
+                position: absolute;
+                left: 150px;
+                top: 90px;
+            }
+            .num1{
+                border: 1px;
+                border-radius: 20px;
+                background-color: black;
+                color: white;
+                height: 50px;
+                width: 300px;
+                font-size: 30px;
+                position: absolute;
+                top: 5px;
+            }
+            .num2{
+                border: 1px ;
+                border-radius: 20px;
+                background-color: black;
+                color: white;
+                height: 50px;
+                width: 300px;
+                font-size: 30px;
+                position: absolute;
+                top: 58px;
+            }
+            .output{
+                border: 1px;
+                border-radius: 20px;
+                background-color: black;
+                color: white;
+                height: 60px;
+                width: 300px;
+                font-size: 30px;
+                position: absolute;
+                top: 111px;  
+                text-align: right;
+            }
+
+        </style>
+    </head>
+    <body class="background">
+        <form>
+        <div class="calculator">
+            <input type="text" placeholder="Enter the number" id="x" class="num1"><br>
+            <input type="text" placeholder="Enter the number" id="y" class="num2"><br>
+            <input type="text" placeholder="0" id="r" class="output">
+
+           <br><br><br><br><br><br><br> <hr color="red">
+           <input type="reset" value="AC"  style="border: 1px solid grey;border-radius: 60px;height: 60px;width: 60px;background-color: #8b8585;font-size: 25px;position: absolute;
+           left: 15px;">
+           <input type="button" value="+/-" style="border: 1px solid grey;border-radius: 60px;height: 60px;width: 60px;background-color: #8b8585;font-size: 25px;position: absolute;
+           left: 80px;">
+           <input type="button" value="%" onclick="mod()" style="border: 1px solid grey;border-radius: 60px;height: 60px;width: 60px;background-color: #8b8585;font-size: 25px;position: absolute;
+           left: 147px;">
+           <input type="button" value="/" onclick="div()" style="border: 1px solid grey;border-radius: 60px;height: 60px;width: 60px;background-color: orange;font-size: 35px;color: white;position: absolute;
+           left: 215px;"><br><br><br><br>
+           <input type="button" value="7" style="border: 1px solid grey;border-radius: 60px;height: 60px;width: 60px;background-color: hsl(0, 1%, 34%);color: white;;font-size: 25px;position: absolute;
+           left: 15px;">
+           <input type="button" value="8" style="border: 1px solid grey;border-radius: 60px;height: 60px;width: 60px;background-color: hsl(0, 1%, 34%);color: white;;font-size: 25px;position: absolute;
+           left: 80px;">
+           <input type="button" value="9" style="border: 1px solid grey;border-radius: 60px;height: 60px;width: 60px;background-color: hsl(0, 1%, 34%);color: white;;font-size: 25px;position: absolute;
+           left: 147px;">
+           <input type="button" value="*" onclick="mul()" style="border: 1px solid grey;border-radius: 60px;height: 60px;width: 60px;background-color: orange;font-size: 45px;color: white;position: absolute;
+           left: 215px;"><br><br><br><br>
+           <input type="button" value="4" style="border: 1px solid grey;border-radius: 60px;height: 60px;width: 60px;background-color: hsl(0, 1%, 34%);color: white;;font-size: 25px;position: absolute;
+           left: 15px;">
+           <input type="button" value="5" style="border: 1px solid grey;border-radius: 60px;height: 60px;width: 60px;background-color: hsl(0, 1%, 34%);color: white;;font-size: 25px;position: absolute;
+           left: 80px;">
+           <input type="button" value="6" style="border: 1px solid grey;border-radius: 60px;height: 60px;width: 60px;background-color: hsl(0, 1%, 34%);color: white;;font-size: 25px;position: absolute;
+           left: 147px;">
+           <input type="button" value="-" onclick="sub()" style="border: 1px solid grey;border-radius: 60px;height: 60px;width: 60px;background-color: orange;font-size: 45px;color: white;position: absolute;
+           left: 215px;"><br><br><br><br>
+           <input type="button" value="1" style="border: 1px solid grey;border-radius: 60px;height: 60px;width: 60px;background-color: hsl(0, 1%, 34%);color: white;;font-size: 25px;position: absolute;
+           left: 15px;">
+           <input type="button" value="2" style="border: 1px solid grey;border-radius: 60px;height: 60px;width: 60px;background-color: hsl(0, 1%, 34%);color: white;;font-size: 25px;position: absolute;
+           left: 80px;">
+           <input type="button" value="3" style="border: 1px solid grey;border-radius: 60px;height: 60px;width: 60px;background-color: hsl(0, 1%, 34%);color: white;;font-size: 25px;position: absolute;
+           left: 147px;">
+           <input type="button" value="+" onclick="sum()" style="border: 1px solid grey;border-radius: 60px;height: 60px;width: 60px;background-color: orange;font-size: 35px;color: white;position: absolute;
+           left: 215px;"><br><br><br><br>
+           <input type="button" value="0" style="border: 1px solid grey;border-radius: 60px;height: 60px;width: 120px;background-color: hsl(0, 1%, 34%);color: white;;font-size: 25px;position: absolute;
+           left: 15px;">
+           <input type="button" value="." style="border: 1px solid grey;border-radius: 60px;height: 60px;width: 60px;background-color: hsl(0, 1%, 34%);color: white;;font-size: 25px;position: absolute;
+           left: 147px;">
+           <input type="button" value="=" style="border: 1px solid grey;border-radius: 60px;height: 60px;width: 60px;background-color: orange;font-size: 35px;color: white;position: absolute;
+           left: 215px;">
+        </div>
+        </form>
+    </body>
+</html>
